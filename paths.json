@@ -1,7 +1,7 @@
 {
   "mappings": [
-    "/content/aem-block-collection/:/",
-    "/content/aem-block-collection/metadata:/metadata.json",
-    "/content/aem-block-collection/configuration:/.helix/config.json"
+    "/content/exmod-20260211/:/",
+    "/content/exmod-20260211/metadata:/metadata.json",
+    "/content/exmod-20260211:/.helix/config.json"
   ]
 }
