@@ -1,6 +1,6 @@
 {
   "mappings": [
-    "/content/exmod-20260211/:/",
+    "/content/exmod-20260211/content/exmod-20260211:/",
     "/content/exmod-20260211/metadata:/metadata.json",
     "/content/exmod-20260211:/.helix/config.json"
   ]
