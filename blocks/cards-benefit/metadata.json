@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-benefit",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-03-03T13:12:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.idfcfirst.bank.in/credit-card/metal-credit-card/ashva",
+    "originPage": "credit card product page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "feature",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + heading + description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["feature/benefit listings", "product highlights on dark backgrounds", "icon-based card grids"],
+    "notSuitableFor": ["blog post cards", "product image cards"]
+  },
+  "usage": {
+    "pagesUsing": ["/credit-card/metal-credit-card/ashva"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-03T13:12:00.000Z"
+  }
+}
