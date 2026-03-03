@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.idfcfirst.bank.in/credit-card/metal-credit-card/ashva",
+  "path": "credit-card/metal-credit-card/ashva",
+  "timestamp": "2026-03-03T16:31:24.550Z",
+  "title": "Apply for Ashva Credit Card - Low Forex & Lounge Access | IDFC FIRST Bank",
+  "template": "credit-card-product-page",
+  "blocks": [
+    "carousel-hero",
+    "carousel-hero",
+    "cards-benefit",
+    "cards-benefit",
+    "cards-benefit",
+    "tabs-privilege",
+    "cards-product",
+    "cards-product",
+    "cards-blog",
+    "accordion-faq",
+    "columns-contact"
+  ]
+}

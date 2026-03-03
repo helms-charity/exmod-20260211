@@ -4,5 +4,6 @@
   "aemSitePath": "/content/exmod-20260211",
   "aemAssetsFolderPath": "/content/dam/exmod-20260211",
   "aemSiteName": "exmod-20260211",
-  "aemSiteTitle": "CHelms exmod-20260211"
+  "aemSiteTitle": "CHelms exmod-20260211",
+  "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json"
 }
