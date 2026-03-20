@@ -1,21 +1,19 @@
-import { showSlide } from '../blocks/carousel/carousel.js';
+import { showSlide } from './slider.js';
 import {
   decorateBlock,
   decorateBlocks,
-  decorateButtons,
   decorateIcons,
-  decorateSections,
   loadBlock,
   loadScript,
   loadSections,
 } from './aem.js';
 import { decorateRichtext } from './editor-support-rte.js';
-import { decorateMain } from './scripts.js';
+import { decorateMain, decorateSections, decorateButtons } from './scripts.js';
 
 function getState(block) {
   if (block.matches('.accordion')) {
-    return [...block.querySelectorAll('details[open]')].map(
-      (details) => details.dataset.aueResource,
+    return [...block.querySelectorAll('li.accordion-item.active')].map(
+      (item) => item.dataset.aueResource,
     );
   }
   if (block.matches('.carousel')) {
@@ -25,14 +23,16 @@ function getState(block) {
     const [currentPanel] = block.querySelectorAll('.tabs-panel[aria-hidden="false"]');
     return currentPanel?.dataset.aueResource;
   }
-
-  return null;
+  return {
+    expandedGroups: [...block.querySelectorAll('.nested-blocks-group[aria-expanded="true"]')]
+      .map((group) => group.dataset.aueResource),
+  };
 }
 
 function setState(block, state) {
   if (block.matches('.accordion')) {
-    block.querySelectorAll('details').forEach((details) => {
-      details.open = state.includes(details.dataset.aueResource);
+    block.querySelectorAll('li.accordion-item').forEach((item) => {
+      item.classList.toggle('active', state.includes(item.dataset.aueResource));
     });
   }
   if (block.matches('.carousel')) {
@@ -46,8 +46,15 @@ function setState(block, state) {
       block.querySelectorAll('.tabs-list button')[index]?.click();
     }
   }
-}
+  if (!state?.expandedGroups?.length) return;
 
+  block.querySelectorAll('.nested-blocks-group').forEach((group) => {
+    if (state.expandedGroups.includes(group.dataset.aueResource)) {
+      group.setAttribute('aria-expanded', 'true');
+    }
+  });
+}
+/* eslint-disable sonarjs/cognitive-complexity */
 async function applyChanges(event) {
   // redecorate default content and blocks on patches (in the properties rail)
   const { detail } = event;
@@ -65,7 +72,10 @@ async function applyChanges(event) {
   await loadScript(`${window.hlx.codeBasePath}/scripts/dompurify.min.js`);
 
   const sanitizedContent = window.DOMPurify.sanitize(content, { USE_PROFILES: { html: true } });
-  const parsedUpdate = new DOMParser().parseFromString(sanitizedContent, 'text/html');
+  const parsedUpdate = document.implementation.createHTMLDocument('');
+  parsedUpdate.open();
+  parsedUpdate.write(sanitizedContent);
+  parsedUpdate.close();
   const element = document.querySelector(`[data-aue-resource="${resource}"]`);
 
   if (element) {
@@ -155,6 +165,13 @@ function handleSelection(event) {
     if (block && block.matches('.tabs')) {
       setState(block, element.dataset.aueResource);
     }
+    // Expand parent group if selecting an item within a collapsed group
+    const parentGroup = element.closest('.nested-blocks-group');
+    if (parentGroup && parentGroup.getAttribute('aria-expanded') !== 'true') {
+      parentGroup.setAttribute('aria-expanded', 'true');
+    }
+
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 }
 
