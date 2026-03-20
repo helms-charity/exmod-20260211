@@ -28,31 +28,13 @@
     ]
   },
   {
-    "id": "accordion-faq",
-    "components": [
-      "accordion-faq-item"
-    ]
-  },
-  {
     "id": "accordion",
     "components": [
       "accordion-item"
     ]
   },
   {
-    "id": "cards-benefit",
-    "components": [
-      "card"
-    ]
-  },
-  {
-    "id": "cards-blog",
-    "components": [
-      "card"
-    ]
-  },
-  {
-    "id": "cards-product",
+    "id": "card-carousel",
     "components": [
       "card"
     ]
@@ -64,30 +46,9 @@
     ]
   },
   {
-    "id": "carousel-hero",
-    "components": [
-      "carousel-hero-item"
-    ]
-  },
-  {
     "id": "carousel",
     "components": [
       "carousel-item"
-    ]
-  },
-  {
-    "id": "columns-contact",
-    "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
     ]
   },
   {
@@ -103,6 +64,18 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "nested-blocks-filter",
+    "components": [
+      "nested-group"
+    ]
+  },
+  {
+    "id": "nested-group-filter",
+    "components": [
+      "nested-item"
     ]
   },
   {
@@ -127,12 +100,6 @@
     "id": "table-4-columns",
     "components": [
       "table-col-4"
-    ]
-  },
-  {
-    "id": "tabs-privilege",
-    "components": [
-      "tabs-privilege-item"
     ]
   },
   {
