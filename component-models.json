@@ -136,27 +136,12 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "tabs",
+            "value": "tabs"
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "accordion-faq-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "summary",
-        "value": "",
-        "label": "Summary"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
@@ -199,130 +184,28 @@
     ]
   },
   {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "carousel-hero-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "media_image",
-        "label": "Background Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "media_imageAlt",
-        "value": "",
-        "label": "Bacgkround Alt"
-      },
-      {
-        "component": "richtext",
-        "name": "content_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "carousel-item",
     "fields": [
       {
         "component": "reference",
         "valueType": "string",
-        "name": "media_image",
+        "name": "backgroundImage",
         "label": "Background Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "media_imageAlt",
+        "name": "backgroundImageAlt",
         "value": "",
-        "label": "Bacgkround Alt"
+        "label": "Background Image Alt"
       },
       {
         "component": "richtext",
-        "name": "content_text",
+        "name": "content",
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "columns-contact",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
       }
     ]
   },
@@ -434,6 +317,64 @@
         "component": "text",
         "name": "linkText",
         "label": "Text"
+      }
+    ]
+  },
+  {
+    "id": "section-tabs",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Section Title",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "nested-group",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Group Heading",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "boolean",
+        "name": "expanded",
+        "label": "Expanded by Default",
+        "valueType": "boolean",
+        "value": false
+      }
+    ]
+  },
+  {
+    "id": "nested-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "label",
+        "label": "Item Label",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "url",
+        "label": "Item URL",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "icon",
+        "label": "Icon Name",
+        "valueType": "string",
+        "value": "",
+        "description": "Icon from /icons/ directory (without extension)"
       }
     ]
   },
@@ -631,64 +572,6 @@
     ]
   },
   {
-    "id": "tabs-privilege-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "value": "",
-        "label": "Tab Title"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "content_heading",
-        "value": "",
-        "label": "Heading"
-      },
-      {
-        "component": "select",
-        "valueType": "string",
-        "name": "content_headingType",
-        "value": "",
-        "label": "Heading Type",
-        "options": [
-          {
-            "name": "H3",
-            "value": "h3"
-          },
-          {
-            "name": "H4",
-            "value": "h4"
-          },
-          {
-            "name": "H5",
-            "value": "h5"
-          },
-          {
-            "name": "H6",
-            "value": "h6"
-          }
-        ]
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "content_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "content_richtext",
-        "value": "",
-        "label": "Content",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "tabs-item",
     "fields": [
       {
@@ -778,7 +661,7 @@
         "valueType": "string",
         "name": "placeholder_image",
         "label": "Placeholder Image",
-        "multi": true
+        "multi": false
       },
       {
         "component": "text",
